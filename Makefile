@@ -3,7 +3,7 @@ CPPFLAGS = -I include -Wall
 src = $(wildcard src/*.c)
 obj = $(patsubst src/%.c, build/%.o, $(src))
 
-lvl-ip: $(obj)
+db: $(obj)
 	$(CC) $(obj) -o db
 
 build/%.o: src/%.c
